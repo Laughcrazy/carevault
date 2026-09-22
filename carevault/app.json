@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "CareVault",
+    "slug": "carevault",
+    "scheme": "carevault",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.carevault.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "CareVault uses the camera so you can photograph prescriptions, lab results and doctor's notes.",
+        "NSPhotoLibraryUsageDescription": "CareVault needs access to your photos so you can add existing pictures of medical documents.",
+        "NSFaceIDUsageDescription": "CareVault uses Face ID to unlock your health records."
+      }
+    },
+    "android": {
+      "package": "com.carevault.app",
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES", "USE_BIOMETRIC"],
+      "adaptiveIcon": { "backgroundColor": "#0F6E5C" }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      ["expo-splash-screen", { "backgroundColor": "#0E1C1B", "resizeMode": "contain" }]
+    ],
+    "experiments": { "typedRoutes": true },
+    "extra": {
+      "supabaseUrl": "SET_VIA_EAS_ENV",
+      "supabaseAnonKey": "SET_VIA_EAS_ENV"
+    }
+  }
+}
